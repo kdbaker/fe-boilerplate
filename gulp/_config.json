@@ -1,0 +1,31 @@
+{
+  "common" : {
+    "path" : {
+      "app"  : "app"
+    },
+    "sass" : {
+      "indentedSyntax": true,
+      "errLogToConsole" : true
+    }
+  },
+  "development" : {
+    "path" : {
+      "dest" : ".tmp"
+    },
+    "jade" : {
+      "pretty" : true
+    },
+    "sass" : {
+    }
+  },
+  "production" : {
+    "path" : {
+      "dest" : "dist"
+    },
+    "jade" : {
+      "pretty" : false
+    },
+    "sass" : {
+    }
+  }
+}
