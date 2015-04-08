@@ -21,9 +21,9 @@ gulpSequence  = require( 'gulp-sequence' ).use( gulp )
 #    - start watch
 gulp.task 'default', gulpSequence(
   'clean',
-  [ 'jade', 'js', 'sass' ],
-  [ 'webserver', 'livereload' ],
-  'watch'
+  [ 'jade', 'coffee', 'sass' ],
+  'watch',
+  [ 'webserver', 'livereload' ]
 )
 
 # this is our deployment task, it will set everything for production-ready files

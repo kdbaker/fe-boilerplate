@@ -10,9 +10,8 @@ connect = require 'gulp-connect'
 watch   = require 'gulp-watch'
 
 gulp.task 'livereload', ->
-  gulp.src [ tmp + '/**/*.html', tmp + '/**/*.css', tmp + '/**/*.js', app + '/**/*.js' ]
+  gulp.src [ tmp + '/**/*.html', tmp + '/**/*.css', tmp + '/**/*.js' ]
   .pipe watch( tmp + '/**/*.html' )
   .pipe watch( tmp + '/**/*.css' )
   .pipe watch( tmp + '/**/*.js' )
-  .pipe watch( app + '/**/*.js' )
   .pipe connect.reload()
