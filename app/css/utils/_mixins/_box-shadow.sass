@@ -1,0 +1,20 @@
+// Table of Contents
+//
+// a. Example Usage
+// b. Mixin - Box Shadow
+
+// a. Example Usage
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+// b. Mixin - Box Shadow
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+=box-shadow( $top, $left, $blur, $color, $inset: false )
+	@if $inset
+		-webkit-box-shadow: inset $top $left $blur $color
+		-moz-box-shadow: inset $top $left $blur $color
+		box-shadow: inset $top $left $blur $color
+	@else
+		-webkit-box-shadow: $top $left $blur $color
+		-moz-box-shadow: $top $left $blur $color
+		box-shadow: $top $left $blur $color

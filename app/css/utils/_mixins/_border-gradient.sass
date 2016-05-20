@@ -1,0 +1,41 @@
+// Table of Contents
+//
+// a. Example Usage
+// b. Mixin - Border Gradient
+
+// a. Example Usage
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+// b. Mixin - Border Gradient
+// - - - - - - - - - - - - - - - - - - - - - - - - -
+=border-gradient( $direction: top, $color: #000, $size: 1px )
+	// Default to top to bottom
+	$width: 0 $size 0 $size
+	$webkit-direction: 0 0, 0 100%
+	$to_direction: bottom
+
+	// bottom to top
+	@if $direction == bottom
+		$webkit-direction: 0 100%, 0 0
+		$to_direction: top
+
+	// left to right
+	@if $direction == left
+		$width: $size 0 $size $size
+		$webkit-direction: 100% 0, 0 0
+		$to_direction: right
+
+	// right to left
+	@if $direction == right
+		$width: $size $size $size 0
+		$webkit-direction: 0 0, 100% 0
+		$to_direction: left
+
+	border-width: $width
+	border-style: solid
+	-webkit-border-image: -webkit-gradient( linear, $webkit-direction, from( $color ), to( rgba( $color, 0 ) ) ) 1 100%
+	-webkit-border-image: -webkit-linear-gradient( $direction, $color, rgba( $color, 0 ) ) 1 100%
+	-moz-border-image: -moz-linear-gradient( $direction, $color, rgba( $color, 0 ) ) 1 100%
+	-o-border-image: -o-linear-gradient( $direction, $color, rgba( $color, 0 ) ) 1 100%
+	border-image: linear-gradient( to $to_direction, $color, rgba( $color, 0 ) ) 1 100%
