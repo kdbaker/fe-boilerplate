@@ -21,7 +21,7 @@ gulpSequence  = require( 'gulp-sequence' ).use( gulp )
 #    - start watch
 gulp.task 'default', gulpSequence(
   'clean',
-  [ 'jade', 'coffee', 'sass' ],
+  [ 'pug', 'coffee', 'sass' ],
   'watch',
   [ 'webserver', 'livereload' ]
 )

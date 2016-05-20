@@ -7,11 +7,11 @@ env     = v.env
 config  = v.config
 gutil   = v.gutil
 dest    = config[ env ].path.dest
-jade    = require 'gulp-jade'
+pug     = require 'gulp-pug'
 
-gulp.task 'jade', ->
-  gulp.src( config.common.path.app + '/**/*.jade' )
-  .pipe jade( config[ env ].jade )
+gulp.task 'pug', ->
+  gulp.src( config.common.path.app + '/**/*.pug' )
+  .pipe pug( config[ env ].pug )
   .pipe gulp.dest( dest )
   # catch errors
   .on 'error', gutil.log

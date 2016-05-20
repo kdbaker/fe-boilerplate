@@ -12,7 +12,7 @@
     "path" : {
       "dest" : ".tmp"
     },
-    "jade" : {
+    "pug" : {
       "pretty" : true
     },
     "sass" : {
@@ -22,7 +22,7 @@
     "path" : {
       "dest" : "dist"
     },
-    "jade" : {
+    "pug" : {
       "pretty" : false
     },
     "sass" : {
