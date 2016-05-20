@@ -1,18 +1,9 @@
-doctype html
-html
+extends ./layout.pug
 
-head
-  meta( charset='utf-8' )
-  title Sample
-  meta( name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1' )
+block title
+  title Some Rocking Site - Home Page
 
-  link( rel='stylesheet', href='css/app.css' )
-
-body
-  header
-    h1 Welcome to the awesome site
-  footer
-    p &copy; YEAR
-
-  script( src='js/main.js' )
-
+block body
+  body
+    header
+      h1 Welcome to the Rocking site

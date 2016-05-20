@@ -1,0 +1,65 @@
+doctype html
+html
+	head
+		meta( charset='utf-8' )
+		meta( name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1' )
+
+		block title
+			title Some Rocking Site
+
+		block meta_description
+			meta( name='description', content='' )
+
+		block meta_keywords
+			meta( name='keywords', content='' )
+
+		//- Social Meta
+		meta( property='og:type', content='website' )
+		block meta_ogurl
+			meta( property='og:url', content='http://www.YOURSITEURL.com' )
+		block meta_ogimage
+			meta( property='og:image', content='http://www.YOURSITEURL.com/images/IMAGE.png' )
+		block meta_ogtitle
+			meta( property='og:title', content='' )
+		block meta_ogdescription
+			meta( property='og:description', content='' )
+		block meta_ogsitename
+			meta( property='og:site_name', content='' )
+
+		//- Favicons
+		link( rel='shortcut icon' href='http://www.YOURSITEURL.com/images/favicon.ico' type='image/x-icon' )
+
+		//- iPad 3 Retina Display
+		link( rel='apple-touch-icon-precomposed', sizes='144x144', href='./images/ipad@2x-precomposed.png')
+
+		//- iPhone 4 Retina display
+		link( rel='apple-touch-icon-precomposed', sizes='144x144', href='./images/iphone@2x-precomposed.png')
+
+		//- iPad non-Retina display
+		link( rel='apple-touch-icon-precomposed', sizes='72x72', href='./images/ipad-precomposed.png')
+
+		//- Non-Retina iPhone, iPod Touch, Android 2.1+
+		link( rel='apple-touch-icon-precomposed', href='./images/iphone-precomposed.png')
+
+		//- App CSS
+		link( rel='stylesheet', href='/css/app.css' )
+		block css
+
+		//- Vendor JS (Head)
+		//- script( src='/bower_components/modernizr/modernizr.js' )
+		block vendorjs_head
+
+	block body
+
+	include ./_partials/_footer.pug
+
+	//- Vendor JS
+	//- script( src='/bower_components/jquery/dist/jquery.min.js' )
+	block vendorjs
+
+	//- App JS
+	//- script( src='/js/main.js' )
+	block appjs
+
+	if ( 'production' == process.env.NODE_ENV )
+		include ./_partials/_google-analytics.pug
